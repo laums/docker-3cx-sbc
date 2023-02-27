@@ -14,7 +14,7 @@ RUN apt update \
     && ar x 3cxsbc_*.deb \
     && tar xvf data.tar.gz
 
-FROM debian:${DEBIAN_VERSION}-slim
+FROM arm64v8/debian:${DEBIAN_VERSION}-slim
 
 RUN apt update \
     && apt install -y curl libssl1.1 ca-certificates
